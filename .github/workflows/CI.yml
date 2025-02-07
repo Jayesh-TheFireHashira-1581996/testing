@@ -38,7 +38,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
-          path:  ${{ github.event.inputs.artifact_path }}
+          path:  .
   test:
     needs : build
     # The type of runner that the job will run on
@@ -88,4 +88,4 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name:  build-artifacts
-          path: ${{ github.event.inputs.artifact_path }}
+          path: .
