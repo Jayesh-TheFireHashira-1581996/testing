@@ -35,10 +35,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
-          path: https://github.com/Jayesh-TheFireHashira-1581996/testing/edit/main/.github/ja.zip
+          path: .
   test:
     needs : build
     # The type of runner that the job will run on
@@ -59,7 +59,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Download build artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-artifacts
-          path: https://github.com/Jayesh-TheFireHashira-1581996/testing/edit/main/.github/ja.zip
+          path: .
